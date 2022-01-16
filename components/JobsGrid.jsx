@@ -1,20 +1,10 @@
 import Image from "next/image"
-import { useEffect, useState } from "react"
 import styles from "../styles/JobsGrid.module.css"
 
-const JobsGrid = () => {
-  const [jobs, setJobs] = useState([])
-
-  useEffect(() => {
-    fetch("/api/jobs")
-      .then(res => res.json())
-      .then(data => setJobs(data))
-      .catch(console.error)
-  })
-
+const JobsGrid = ({ jobs }) => {
   return (
     <div className={styles.jobsGrid}>
-      {jobs.map(job => {
+      {jobs?.map(job => {
         return (
           <a
             key={job.id}

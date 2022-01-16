@@ -1,8 +1,13 @@
 import Head from "next/head"
+import useSWR from "swr"
 import JobsGrid from "../components/JobsGrid"
 import styles from "../styles/Home.module.css"
 
+const fetcher = url => fetch(url).then(res => res.json())
+
 export default function Home() {
+  const { data } = useSWR("/api/jobs", fetcher)
+
   return (
     <>
       <Head>
@@ -14,7 +19,7 @@ export default function Home() {
           <h1 className="mb-6">Jobs</h1>
         </div>
 
-        <JobsGrid></JobsGrid>
+        <JobsGrid jobs={data}></JobsGrid>
       </div>
     </>
   )
