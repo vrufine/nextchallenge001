@@ -1,0 +1,43 @@
+.jobsGrid {
+  @apply w-full;
+  @apply transition-all;
+
+  @apply flex flex-col;
+  @apply sm:gap-6;
+  @apply divide-y sm:divide-none;
+
+  .card {
+    @apply sm:rounded;
+    @apply px-4 py-8 sm:p-4;
+    @apply transition-all duration-500;
+    @apply sm:hover:shadow-lg;
+    @apply sm:hover:bg-white;
+
+    .heading {
+      @apply flex flex-col sm:flex-row sm:gap-4;
+      @apply items-start sm:items-center;
+      @apply justify-start sm:justify-between;
+      @apply border-b-2;
+      @apply border-indigo-400;
+      @apply mb-4;
+
+      h2 {
+        @apply flex flex-col sm:flex-row;
+        @apply items-start sm:items-center;
+        .featured {
+          @apply italic font-bold;
+          @apply bg-indigo-800 text-white;
+          @apply text-lg max-w-fit px-4 py-1 rounded;
+          @apply mr-2;
+        }
+      }
+    }
+
+    .tag {
+      @apply rounded border;
+      @apply border-orange-500 bg-orange-200;
+      @apply text-orange-800;
+      @apply text-xs px-2 py-1;
+    }
+  }
+}

@@ -1,11 +1,11 @@
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
+import Footer from "../components/Footer.jsx"
+import Navbar from "../components/Navbar.jsx"
 
 const DefaultLayout = ({ children }) => {
   return (
-    <div>
+    <div className="bg-indigo-50">
       <Navbar />
-      <div className="container my-4">{children}</div>
+      <div className="my-10">{children}</div>
       <Footer />
     </div>
   )

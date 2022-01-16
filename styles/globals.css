@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+  @apply transition-all;
+  @apply text-2xl lg:text-4xl italic;
+  @apply font-semibold;
+  @apply border-b-4 border-indigo-400;
+  @apply pr-2 pb-2;
+}
+
+h2 {
+  @apply transition-all;
+  @apply text-xl lg:text-2xl italic;
+  @apply font-semibold;
+  @apply pr-1 pb-1;
+}
